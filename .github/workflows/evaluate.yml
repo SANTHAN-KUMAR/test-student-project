@@ -10,6 +10,11 @@ on:
   push:
     branches: ["*"]
 
+permissions:
+  contents: read
+  issues: write
+  pull-requests: write
+
 jobs:
   evaluate:
     uses: SANTHAN-KUMAR/PBL-Guardian/.github/workflows/evaluation.yml@main
