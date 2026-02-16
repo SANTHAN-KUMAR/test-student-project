@@ -1,0 +1,19 @@
+# =============================================================================
+# PBL Guardian — Test Student Evaluation Trigger
+# =============================================================================
+# Calls the reusable evaluation workflow from the central PBL-Guardian repo.
+# =============================================================================
+
+name: "🤖 PBL Evaluation"
+
+on:
+  push:
+    branches: ["*"]
+
+jobs:
+  evaluate:
+    uses: SANTHAN-KUMAR/PBL-Guardian/.github/workflows/evaluation.yml@main
+    with:
+      source_dir: "src"
+      config_path: ".pbl/config.json"
+    secrets: inherit
